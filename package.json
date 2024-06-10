@@ -1,9 +1,9 @@
 {
-  "name": "vite-plugin-dts",
+  "name": "@pkges/vite-plugin-dts",
   "version": "3.9.1",
   "type": "module",
   "license": "MIT",
-  "author": "qmhc",
+  "author": "JeanBarriere <jean@barriere.io>",
   "packageManager": "pnpm@8.3.0",
   "scripts": {
     "build": "tsx scripts/build.ts",
@@ -41,10 +41,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/qmhc/vite-plugin-dts.git"
+    "url": "git+https://github.com/jeanbarriere/vite-plugin-dts.git"
   },
   "bugs": {
-    "url": "https://github.com/qmhc/vite-plugin-dts/issues"
+    "url": "https://github.com/jeanbarriere/vite-plugin-dts/issues"
   },
   "keywords": [
     "vite",
@@ -52,19 +52,14 @@
     "ts",
     "dts",
     "typescript",
-    "vue",
-    "tsc",
-    "vue-tsc",
-    "volar"
+    "tsc"
   ],
   "dependencies": {
     "@microsoft/api-extractor": "7.47.0",
     "@rollup/pluginutils": "^5.1.0",
-    "@vue/language-core": "^1.8.27",
     "debug": "^4.3.4",
     "kolorist": "^1.8.0",
-    "magic-string": "^0.30.8",
-    "vue-tsc": "^1.8.27"
+    "magic-string": "^0.30.8"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.2.1",

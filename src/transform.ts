@@ -86,8 +86,7 @@ export function transformCode(options: {
   aliases: Alias[],
   aliasesExclude: (string | RegExp)[],
   staticImport: boolean,
-  clearPureImport: boolean,
-  cleanVueFileName: boolean
+  clearPureImport: boolean
 }) {
   const s = new MagicString(options.content)
   const ast = ts.createSourceFile('a.ts', options.content, ts.ScriptTarget.Latest)
@@ -99,9 +98,7 @@ export function transformCode(options: {
   const declareModules: string[] = []
 
   const toLibName = (origin: string) => {
-    const name = transformAlias(origin, dir, options.aliases, options.aliasesExclude)
-
-    return options.cleanVueFileName ? name.replace(/\.vue$/, '') : name
+    return transformAlias(origin, dir, options.aliases, options.aliasesExclude)
   }
 
   let indexCount = 0
